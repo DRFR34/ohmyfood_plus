@@ -1,6 +1,7 @@
+/** animation ouverture page*/
 
-// @import "global_styles";
-  
+// Estompage
+
 .fadingRestaurant{
     z-index: -2;
     position: fixed;
@@ -9,25 +10,32 @@
     width:100%;
     height:100%; 
     background-color: rgba(255,255,255,0);
-    animation: fadingRestaurantAnim .3s ease-out; 
+    animation: fadingRestaurantAnim .6s ease-out; 
     animation-fill-mode: backwards; 
     animation-iteration-count: 1;
 }
-     
-@keyframes fadingRestaurantAnim  {
-    0% { 
-        background-color: rgba(255,255,255,1); 
-        z-index: 10;
-        }
-        99.999% {
-        background-color: rgba(255,255,255,0);
-        z-index: 10;
-        } 
-        100% { 
-        background-color: rgba(255,255,255,0);
-        z-index: -2;
-        }
+
+//   emphase des plats
+
+article:nth-child(1){
+    animation: articlesAnim  .3s ;
+    animation-fill-mode: backwards;
 }
+article:nth-child(2){
+    animation: articlesAnim  .3s .2s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(3){
+    animation: articlesAnim .1s .3s;
+    animation-fill-mode: backwards;
+}
+article:nth-child(4){
+    animation: articlesAnim .05s .35s;
+    animation-fill-mode: backwards;
+}
+
+     
+
 
 /**  header   **/   
 
@@ -59,8 +67,54 @@
 
 }
 
-/**  subHeader   **/
+// /** check-boxes **/
 
+// .customCheck {    
+//         font-size: 0px;
+//         width: 100%;
+    
+//     input {
+//             display: none;
+//             &:checked ~ {
+//                 .subHeader__dishesType__dishesList__dishCard {
+//                     &:hover {                         
+//                         .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn  .fa-check {
+//                             animation: none;
+//                             opacity: 1;
+//                             }
+//                     }
+//                 }
+//                 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
+//                     transform: translateX(-65px);
+//                     // &_checkButton {
+//                     //     .fa-circle, 
+//                     //     .fa-check {
+//                     //     animation: none;
+//                     //     }
+//                     // } 
+//                 }
+//                 .subHeader__dishesType__dishesList__dishCard__dishDescription {
+//                 animation: textReduction 0s ;
+//                 animation-fill-mode:forwards;
+//                 }
+
+//             }
+//         }
+//     }
+
+//     .fa-circle{
+//         @extend %flexCentered;
+//         font-size: 25px;
+//         color: white;
+//     }
+    
+//     .fa-check{
+//         @extend %flexCentered;
+//         font-size: 16px;
+//         color:$tertiary-color;
+//     }
+       
+/** Conteneur subHeader **/
 .subHeader{
     position: relative;
     
@@ -87,10 +141,8 @@
                 .heartBox{    
                     position: relative; 
                     right: 35px;
-                    // font-size: 25px;
                 }
             }
-
         }  
 
     
@@ -134,6 +186,10 @@
                     {
                             animation: priceAndCheckBtnTranslate 0.3s .05s linear;
                             animation-fill-mode:forwards; 
+                            .fa-check{
+                                animation: faCheckWarning  linear 2s 1;
+                                animation-fill-mode:forwards;
+                            }
                     }
                 }
 
@@ -151,6 +207,9 @@
                     &__dishAccompaniments{
                         font-size: 15px ;
                     }
+                    &__dishName { 
+                        font-size: 18px;
+                    }
                 }
 
                 &__dishPriceAndCheckBtn{
@@ -162,32 +221,32 @@
                     right: -65px;
                     align-items: end;
 
-                        &__dishPrice{
-                            width: 45px;
-                            padding: 0 0 14px 0;
-                            text-align: center;
-                            font-size: 15px;
-                            font-weight: 700;
-                        }
+                    &__dishPrice{
+                        width: 45px;
+                        padding: 0 0 14px 0;
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
 
-                        &__checkButton{
-                            position: relative;
-                            display:flex ;
-                            justify-content:center; 
-                            align-items: center;
-                            height: 100%;
-                            width: 65px;
-                            border-radius: 0 15px 15px 0;
-                            background-color: $tertiary-color;
-                        
-                            &__checkBox{
-                                position: absolute;
-                                top: 50%;
-                                left:50%;
-                                transform: translate(-50%, -50%);
-                            }
-                        
+                    &__checkButton{
+                        position: relative;
+                        display:flex ;
+                        justify-content:center; 
+                        align-items: center;
+                        height: 100%;
+                        width: 65px;
+                        border-radius: 0 15px 15px 0;
+                        background-color: $tertiary-color;
+                    
+                        &__checkBox{
+                            position: absolute;
+                            top: 50%;
+                            left:50%;
+                            transform: translate(-50%, -50%);
                         }
+                    
+                    }
 
                 }
             }
@@ -196,6 +255,44 @@
 
 
 }
+
+/** check-boxes **/
+
+.customCheck {    
+    font-size: 0px;
+    width: 100%;
+
+input {
+        display: none;
+        &:checked ~ {
+            .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn  .fa-check {
+                        animation: none;
+            }
+            
+            .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
+                transform: translateX(-65px);               
+            }
+            .subHeader__dishesType__dishesList__dishCard__dishDescription {
+            animation: textReduction 0s ;
+            animation-fill-mode:forwards;
+            }
+
+        }
+    }
+}
+
+.fa-circle{
+    @extend %flexCentered;
+    font-size: 25px;
+    color: white;
+}
+
+.fa-check{
+    @extend %flexCentered;
+    font-size: 16px;
+    color:$tertiary-color;
+}
+
 
 
 /**  Commander **/
@@ -211,23 +308,25 @@
 }
 
      
-/** animation fadding plats */
 
-article:nth-child(1){
-    animation: articlesAnim  .3s ;
-    animation-fill-mode: backwards;
-}
-article:nth-child(2){
-    animation: articlesAnim  .3s .2s ;
-    animation-fill-mode: backwards;
-}
-article:nth-child(3){
-    animation: articlesAnim .1s .3s;
-    animation-fill-mode: backwards;
-}
-article:nth-child(4){
-    animation: articlesAnim .05s .35s;
-    animation-fill-mode: backwards;
+
+/*** keyframes ***/
+
+//  keyframes ouverture page
+
+@keyframes fadingRestaurantAnim  {
+    0% { 
+        background-color: rgba(255,255,255,1); 
+        z-index: 10;
+        }
+        99.999% {
+        background-color: rgba(255,255,255,0);
+        z-index: 10;
+        } 
+        100% { 
+        background-color: rgba(255,255,255,0);
+        z-index: -2;
+        }
 }
 
 @keyframes articlesAnim {
@@ -245,6 +344,8 @@ article:nth-child(4){
     }
 }
 
+//  keyframes survol plats
+
 @keyframes textReduction {
     from{
         width: calc(100% - 55px);
@@ -258,27 +359,26 @@ article:nth-child(4){
     100%{ transform: translateX(-65px); }
 }
 
-
-.fa-circle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    color: white;
+@keyframes faCheckWarning{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
-.fa-check{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-    color:$tertiary-color;
-}
 
-
-/***===========================================
+/*===========================================
 ***   desktop  
 ===============================================*/
 @media (min-width: 1440px) {

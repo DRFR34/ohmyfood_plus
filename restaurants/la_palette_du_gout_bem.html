@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La palette du goût</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <script src="https://kit.fontawesome.com/64a15eb5cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -15,189 +15,282 @@
     <div class="fadingRestaurant"></div>
 
     <header class=".header">
-        <nav class="header__restaurantNav">            
-                <a href="../index.html">
-                    <i class="header__restaurantNav__previousIcon fa-solid fa-arrow-left "></i>
-                </a>            
-                <img class="header__restaurantNav__logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
-        </nav>    
+        <nav class="header__restaurantNav">
+            <a href="../index.html">
+                <i class="header__restaurantNav__previousIcon fa-solid fa-arrow-left "></i>
+            </a>
+            <img class="header__restaurantNav__logo" src="../images/logo/ohmyfood@2x.svg" alt="Logo Oh my food">
+        </nav>
         <div class="header__banner">
-            <img class="header__banner__restaurantWindow" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant">
-        </div>      
+            <img class="header__banner__restaurantWindow"
+                src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Un plat du restaurant">
+        </div>
     </header>
 
     <main>
         <div class="subHeader">
             <section class="subHeader__restaurantMenu">
                 <div class="subHeader__restaurantMenu__restaurantTitle">
-                    <h1 class="subHeader__restaurantMenu__restaurantTitle__restaurantName">La palette du goût</h1>                    
+                    <h1 class="subHeader__restaurantMenu__restaurantTitle__restaurantName">La palette du goût</h1>
                     <label class="heartBox">coeur à cliquer
-                        <input  type="checkbox">
+                        <input type="checkbox">
                         <i class="heartEmpty fa-regular fa-heart"></i>
                         <i class="heartFilled fa-solid fa-heart"></i>
                     </label>
                 </div>
                 <section class="subHeader__dishesType starters">
-                    <h2 class="subHeader__dishesType__h2"><span class="subHeader__dishesType__h2--titleUnderline">entr</span>ées</h2>
+                    <h2 class="subHeader__dishesType__h2"><span
+                            class="subHeader__dishesType__h2--titleUnderline">entr</span>ées</h2>
                     <div class="subHeader__dishesType__dishesList">
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Fricassée d'escargots</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Au piment d'Espelette</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">25€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Fricassée d'escargots</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Au piment d'Espelette </p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        25€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
                                         <i class="uncheckedIcon fa-solid fa-circle"></i>
                                         <i class="checkedIcon fa-solid fa-check"></i>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Foie gras de canard mi-cuit</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Et ses copeaux de truffe noire</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">35€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Foie gras de canard mi-cuit</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Et ses copeaux de truffe noire</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        35€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Œuf au plat</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Assaisonné à la truffe sur lit de caviar</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">20€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+
+
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Œuf au plat</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Assaisonné à la truffe sur lit de caviar</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        20€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>                        
+                            </label>
+                        </article>
                     </div>
                 </section>
                 <section class="subHeader__dishesType main-courses">
-                    <h2 class="subHeader__dishesType__h2"><span class="subHeader__dishesType__h2--titleUnderline">plat</span>s</h2>
-                    <div class="subHeader__dishesType__dishesList">                        
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Filet de bœuf aux herbes</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Accompagné de sa ribambelle de légumes</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">40€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                    <h2 class="subHeader__dishesType__h2"><span
+                            class="subHeader__dishesType__h2--titleUnderline">plat</span>s</h2>
+                    <div class="subHeader__dishesType__dishesList">
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Filet de bœuf aux herbes</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Accompagné de sa ribambelle de légumes</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        40€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Parmentier de queue de bœuf</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">À la truffe noire sur sa purée de panais</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">35€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Parmentier de queue de bœuf</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        À la truffe noire sur sa purée de panais</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        35€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Filet de turbot</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Aux agrumes</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">44€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Filet de turbot</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Aux agrumes</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        44€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
                     </div>
                 </section>
                 <section class="subHeader__dishesType desserts">
-                    <h2 class="subHeader__dishesType__h2"><span class="subHeader__dishesType__h2--titleUnderline">dess</span>erts</h2>
+                    <h2 class="subHeader__dishesType__h2"><span
+                            class="subHeader__dishesType__h2--titleUnderline">dess</span>erts</h2>
                     <div class="subHeader__dishesType__dishesList">
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Paris-Brest</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Revisité</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">18€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Paris-Brest</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Revisité</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        18€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Macaron au chocolat d'exception</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Et glace à la vanille de Madagascar</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">22€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Macaron au chocolat d'exception</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Et glace à la vanille de Madagascar</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        22€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
-                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow"> 
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
-                                <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">Mousse au chocolat</h3>
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">Au piment d'Espelette et à la truffe noire</p>
-                            </div>
-                            <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
-                                <p class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">23€</p>
-                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
-                                    <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
-                                        <i class="uncheckedIcon fa-solid fa-circle"></i>
-                                        <i class="checkedIcon fa-solid fa-check"></i>
+                        <article class="subHeader__dishesType__dishesList__dishCard boxShadow">
+                            <label class="customCheck">Cliquer pour choisir ce plat
+                                <input type="checkbox">
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishDescription">
+                                    <h3 class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishName">
+                                        Mousse au chocolat</h3>
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments">
+                                        Au piment d'Espelette et à la truffe noire</p>
+                                </div>
+                                <div class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn">
+                                    <p
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__dishPrice">
+                                        23€</p>
+                                    <div
+                                        class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton">
+                                        <div
+                                            class="subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn__checkButton__checkBox">
+                                            <i class="uncheckedIcon fa-solid fa-circle"></i>
+                                            <i class="checkedIcon fa-solid fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </label>
                         </article>
                     </div>
                 </section>
-            <div class="command">                
-                <button class="mainBtn boxShadow" type="submit">Commander</button>
-            </div>
-            </section> 
-            
+                <div class="command">
+                    <button class="mainBtn boxShadow" type="submit">Commander</button>
+                </div>
+            </section>
+
         </div>
-    </main> 
+    </main>
 
     <footer class="footer">
-        <h2>ohmyfood</h2>        
-        <div class="footer__box">            
+        <h2>ohmyfood</h2>
+        <div class="footer__box">
             <a href="">
                 <div class="footer__box__item">
                     <div class="footer__box__item__iconBox">
@@ -230,7 +323,7 @@
                     <p class="footer__box__item__p">Contact</p>
                 </div>
             </a>
-        </div>        
+        </div>
     </footer>
 
 </body>

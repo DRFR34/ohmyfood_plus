@@ -3,7 +3,7 @@
 **     GENERAL
 **==================================================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.heartEmpty, .heartFilled {
+.fa-check, .fa-circle, .heartEmpty, .heartFilled {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -540,6 +540,7 @@ p {
   right: 40px;
 }
 
+/** animation ouverture page*/
 .fadingRestaurant {
   z-index: -2;
   position: fixed;
@@ -548,25 +549,31 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
-  animation: fadingRestaurantAnim 0.3s ease-out;
+  animation: fadingRestaurantAnim 0.6s ease-out;
   animation-fill-mode: backwards;
   animation-iteration-count: 1;
 }
 
-@keyframes fadingRestaurantAnim {
-  0% {
-    background-color: rgb(255, 255, 255);
-    z-index: 10;
-  }
-  99.999% {
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 10;
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-    z-index: -2;
-  }
+article:nth-child(1) {
+  animation: articlesAnim 0.3s;
+  animation-fill-mode: backwards;
 }
+
+article:nth-child(2) {
+  animation: articlesAnim 0.3s 0.2s;
+  animation-fill-mode: backwards;
+}
+
+article:nth-child(3) {
+  animation: articlesAnim 0.1s 0.3s;
+  animation-fill-mode: backwards;
+}
+
+article:nth-child(4) {
+  animation: articlesAnim 0.05s 0.35s;
+  animation-fill-mode: backwards;
+}
+
 /**  header   **/
 .header {
   /** photo "vitrine"  **/
@@ -591,7 +598,7 @@ p {
   height: 275px;
 }
 
-/**  subHeader   **/
+/** Conteneur subHeader **/
 .subHeader {
   position: relative;
 }
@@ -655,6 +662,10 @@ p {
   animation: priceAndCheckBtnTranslate 0.3s 0.05s linear;
   animation-fill-mode: forwards;
 }
+.subHeader__dishesType__dishesList__dishCard:hover .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn .fa-check {
+  animation: faCheckWarning linear 2s 1;
+  animation-fill-mode: forwards;
+}
 .subHeader__dishesType__dishesList__dishCard__dishDescription {
   width: calc(100% - 55px);
   padding: 9px 0 10px 10px;
@@ -667,6 +678,9 @@ p {
 }
 .subHeader__dishesType__dishesList__dishCard__dishDescription__dishAccompaniments {
   font-size: 15px;
+}
+.subHeader__dishesType__dishesList__dishCard__dishDescription__dishName {
+  font-size: 18px;
 }
 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
   position: absolute;
@@ -701,6 +715,35 @@ p {
   transform: translate(-50%, -50%);
 }
 
+/** check-boxes **/
+.customCheck {
+  font-size: 0px;
+  width: 100%;
+}
+.customCheck input {
+  display: none;
+}
+.customCheck input:checked ~ .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn .fa-check {
+  animation: none;
+}
+.customCheck input:checked ~ .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
+  transform: translateX(-65px);
+}
+.customCheck input:checked ~ .subHeader__dishesType__dishesList__dishCard__dishDescription {
+  animation: textReduction 0s;
+  animation-fill-mode: forwards;
+}
+
+.fa-circle {
+  font-size: 25px;
+  color: white;
+}
+
+.fa-check {
+  font-size: 16px;
+  color: #99E2D0;
+}
+
 /**  Commander **/
 .command {
   width: 100%;
@@ -712,27 +755,21 @@ p {
   width: 180px;
 }
 
-/** animation fadding plats */
-article:nth-child(1) {
-  animation: articlesAnim 0.3s;
-  animation-fill-mode: backwards;
+/*** keyframes ***/
+@keyframes fadingRestaurantAnim {
+  0% {
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+  }
+  99.999% {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 10;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    z-index: -2;
+  }
 }
-
-article:nth-child(2) {
-  animation: articlesAnim 0.3s 0.2s;
-  animation-fill-mode: backwards;
-}
-
-article:nth-child(3) {
-  animation: articlesAnim 0.1s 0.3s;
-  animation-fill-mode: backwards;
-}
-
-article:nth-child(4) {
-  animation: articlesAnim 0.05s 0.35s;
-  animation-fill-mode: backwards;
-}
-
 @keyframes articlesAnim {
   0% {
     opacity: 0.2;
@@ -759,25 +796,24 @@ article:nth-child(4) {
     transform: translateX(-65px);
   }
 }
-.fa-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-  color: white;
+@keyframes faCheckWarning {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-.fa-check {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  color: #99E2D0;
-}
-
-/***===========================================
+/*===========================================
 ***   desktop  
 ===============================================*/
 @media (min-width: 1440px) {
