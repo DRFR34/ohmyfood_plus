@@ -50,7 +50,7 @@
             
             &:focus{
             outline:none;
-            background-color:#fa90f138;                      
+            background-color:$clear-font-color;                      
             }
             &:focus::placeholder{
                 color:transparent;

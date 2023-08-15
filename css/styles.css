@@ -367,7 +367,7 @@ p {
 }
 .header__locationSearch__searchField:focus {
   outline: none;
-  background-color: rgba(250, 144, 241, 0.2196078431);
+  background-color: #FFFFFF;
 }
 .header__locationSearch__searchField:focus::placeholder {
   color: transparent;
