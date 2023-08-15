@@ -1,0 +1,191 @@
+
+// @import "global_styles";
+
+
+/****** loader ******/    
+
+.loaderBg{
+    z-index: 5;
+    background-color: rgba(255,255,255,1); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%; 
+    animation: loaderRestaurantAnim 3s ease-out;
+    animation-fill-mode: forwards; 
+
+    &__animContainer{
+
+        position: absolute;
+        // top: 30%;
+        top: 15%;
+        left:50%;
+        width: 320px;
+        margin:auto;
+        transform: translateX(-50%);
+
+        &__txt{
+            color: transparent;
+            position:absolute;
+            top:135px;
+            left: 30px;
+            transform: translate(9000px, 100px);
+            font-family:'Shrikhand', cursive;
+            font-size:45px;
+
+            &--ohColor{
+                color: $primary-color;
+            }
+
+            &--myColor{
+                color: $tertiary-color;
+            }
+            &--foodColor{
+                color: $secondary-color;
+            }
+
+            span{
+                font-family:'Shrikhand', cursive;
+                font-size:50px;
+            }
+        }
+
+        .oh{
+            animation: move1 2.4s linear, jumps .3s  cubic-bezier(0,100,.8,100) 3;
+            animation-fill-mode: forwards;
+        }
+        
+        .my{
+            animation: move1 2s .5s, jumps .26s .5s cubic-bezier(0,100,.8,100) 3 ;
+            animation-fill-mode: forwards;
+        }
+        
+        .food{
+            animation: move1 1.5s .8s, jumps .3s 1s cubic-bezier(0,100,.8,100) 3; 
+            animation-fill-mode: forwards;
+        }
+
+        &__plat, &__couvercle{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            /* background-color: red; */
+            z-index: 5;
+            opacity: 1;
+            width: 350px;
+        }
+        
+        &__plat{
+            width: 350px;
+            transform: translate(-50%, 190px);
+            animation: animPlat 2.8s ease-out;
+            animation-fill-mode: forwards;
+            
+        }
+        
+        &__couvercle{
+            width: 400px;
+            transform:  translate(-50%, 0px);
+            animation: animCouvercle 3s ease-out;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+     
+/**  Keyframes **/
+
+@keyframes loaderRestaurantAnim  {
+    0% { 
+        z-index: 10;
+        background-color: rgba(255,255,255,1); 
+        
+        }
+    70.999% {
+        background-color: rgba(255,255,255,.8);
+        z-index: 10;
+        }
+
+    99.999% {
+    background-color: rgba(255,255,255,.7);
+    z-index: 10;
+    } 
+    100% { 
+    background-color: rgba(255,255,255,0);
+    z-index: -2;
+    }
+}
+
+@keyframes move1 {
+    0%{
+        transform: translate(400px, 0px);
+        opacity: 1;
+    }
+
+    50%{ transform: translate(0px, 0px);   }
+
+    99%{
+        
+    transform: translate(0px, 0px); 
+    opacity: 1;
+  } 
+
+    100%{
+       
+        transform: translate(0px, 0px);  
+        opacity: 0;
+        z-index: -2;
+        
+    }
+}
+
+@keyframes jumps {
+    0%{top:136px}
+    
+    100% {
+        top:135px}
+  }
+
+@keyframes animCouvercle {
+    25% {
+      transform:  translate(-70%, -165px) rotate(-35deg);
+      opacity: 1;
+      z-index: 10;
+    }
+    50.9% {
+      transform:  translate(-70%, -165px) rotate(-35deg);
+      z-index: 10;
+      opacity: 1;
+    }
+    80% {
+      transform:   translate(-50%, 0px) rotate(0deg);
+        opacity: 1;
+        z-index: 10;
+    }
+    99.99% {
+        transform:  translate(-50%, 0px) rotate(0deg);
+        z-index: 10;
+        /* opacity: 0.5; */
+      }
+
+    100% {
+      transform: translate(-50%, 0px) rotate(0deg);
+      opacity: 0;
+      z-index: -2;
+    }
+  }
+
+@keyframes animPlat{
+        
+    99.99%{
+        /* transform: translate(-50%, 140%); */
+        opacity: 1; 
+    }
+    
+    100%{
+        /* transform: translate(-50%, 140%); */
+        opacity: 0;
+        z-index: -2;
+
+    }
+}

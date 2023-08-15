@@ -1,0 +1,331 @@
+
+// @import "global_styles";
+  
+.fadingRestaurant{
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%; 
+    background-color: rgba(255,255,255,0);
+    animation: fadingRestaurantAnim .3s ease-out; 
+    animation-fill-mode: backwards; 
+    animation-iteration-count: 1;
+}
+     
+@keyframes fadingRestaurantAnim  {
+    0% { 
+        background-color: rgba(255,255,255,1); 
+        z-index: 10;
+        }
+        99.999% {
+        background-color: rgba(255,255,255,0);
+        z-index: 10;
+        } 
+        100% { 
+        background-color: rgba(255,255,255,0);
+        z-index: -2;
+        }
+}
+
+/**  header   **/   
+
+.header{
+
+    
+    &__restaurantNav{/** navigation **/
+    padding: 20px 30px 15px 30px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+        &__previousIcon{
+        font-size: 20px;
+        color: $dark-font-color;
+        }
+        &__logo{
+            width: 160px;
+            margin: auto;
+            }
+    }
+
+    
+    /** photo "vitrine"  **/
+    &__banner__restaurantWindow{
+        object-fit: cover;
+        width: 100%;
+        height: 275px; 
+        }
+
+}
+
+/**  subHeader   **/
+
+.subHeader{
+    position: relative;
+    
+    &__restaurantMenu{
+        margin-top:-55px;
+        left: 0;
+        right: 0;
+        border-radius: 40px 40px 0 0;
+        padding: 32px 15px;
+        background-color: $main-bg-color;
+
+            &__restaurantTitle{
+                position:relative;
+                padding: 0 0 18px 0;
+                display: flex;
+                justify-content: space-between;
+                
+                &__restaurantName{
+                    font-family: "Shrikhand", cursive;
+                    font-weight: 100;
+                    font-size: 1.73rem;                    
+                }
+
+                .heartBox{    
+                    position: relative; 
+                    right: 35px;
+                    font-size: 25px;
+                }
+            }
+
+        }  
+
+    
+
+    &__dishesType {
+        padding: 10px 0;
+        color: $semi-dark-font-color;
+
+        &__h2{
+            text-transform:uppercase;
+            font-weight: 300;
+            font-size: 16px;
+            &--titleUnderline {
+            border-bottom: solid 3px $tertiary-color;
+            padding: 0 0 5px 0;
+            }
+        }
+
+        &__dishesList{
+            padding: 20px 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            &__dishCard{
+                position: relative;
+                border-style: none;
+                border-radius: 15px;
+                background-color: white;
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                overflow: hidden;
+                &:hover {
+                    .subHeader__dishesType__dishesList__dishCard__dishDescription {
+                        animation: textReduction 0.3s linear ;
+                        animation-fill-mode:forwards;
+                        }
+
+                    .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn
+                    {
+                            animation: priceAndCheckBtnTranslate 0.3s .05s linear;
+                            animation-fill-mode:forwards; 
+                    }
+                }
+
+                &__dishDescription{
+                    width: calc(100% - 55px);
+                    padding: 9px 0 10px 10px;
+
+                    &__dishName, 
+                    &__dishAccompaniments{
+                        line-height: 25px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &__dishAccompaniments{
+                        font-size: 15px ;
+                    }
+                }
+
+                &__dishPriceAndCheckBtn{
+                    position: absolute;
+                    display: flex;
+                    height: 100%;
+                    top:0;
+                    bottom: 0;
+                    right: -65px;
+                    align-items: end;
+
+                        &__dishPrice{
+                            width: 45px;
+                            padding: 0 0 14px 0;
+                            text-align: center;
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+
+                        &__checkButton{
+                            position: relative;
+                            display:flex ;
+                            justify-content:center; 
+                            align-items: center;
+                            height: 100%;
+                            width: 65px;
+                            border-radius: 0 15px 15px 0;
+                            background-color: $tertiary-color;
+                        
+                            &__checkBox{
+                                position: absolute;
+                                top: 50%;
+                                left:50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        
+                        }
+
+                }
+            }
+        }
+    }   
+
+
+}
+
+
+/**  Commander **/
+.command{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+
+    button{
+    width: 180px;
+    }
+}
+
+     
+/** animation fadding plats */
+
+article:nth-child(1){
+    animation: articlesAnim  .3s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(2){
+    animation: articlesAnim  .3s .2s ;
+    animation-fill-mode: backwards;
+}
+article:nth-child(3){
+    animation: articlesAnim .1s .3s;
+    animation-fill-mode: backwards;
+}
+article:nth-child(4){
+    animation: articlesAnim .05s .35s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes articlesAnim {
+   0%{
+    opacity: .2;
+    transform: scale(.5);
+   }
+ 
+    80%{opacity: 0.5;
+}
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textReduction {
+    from{
+        width: calc(100% - 55px);
+    }
+    to{
+        width: calc(100% - 120px);
+    } 
+}
+ 
+@keyframes priceAndCheckBtnTranslate {
+    100%{ transform: translateX(-65px); }
+}
+
+
+.fa-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: white;
+}
+
+.fa-check{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color:$tertiary-color;
+}
+
+
+/***===========================================
+***   desktop  
+===============================================*/
+@media (min-width: 1440px) {
+
+    /**desktop: header**/
+    .header{
+        &__restaurantNav{
+        padding: 31px;
+
+            &__logo{
+            width:unset;
+            }
+        }
+        &__banner{
+             &__restaurantWindow{
+                height:383px;
+            }
+        }
+    }
+  
+    /** desktop: subHeader */
+
+    .subHeader{
+        max-width: 1050px;
+        margin: auto;
+        
+        &__restaurantMenu{
+            margin-top:-40px;
+        padding: 60px 205px 32px 205px;
+        border-radius: 40px 40px 0 0; 
+        
+            &__restaurantTitle{                
+                justify-content: center;
+                
+                .heartBox {
+                right: 0;
+                padding: 0 45px;
+                }
+            }
+        }
+    }
+
+    
+
+    
+
+    
+
+
+}
