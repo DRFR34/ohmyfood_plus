@@ -18,15 +18,15 @@
 //   emphase des plats
 
 article:nth-child(1){
-    animation: articlesAnim  .3s ;
+    animation: articlesAnim  .3s ease-in-out;
     animation-fill-mode: backwards;
 }
 article:nth-child(2){
-    animation: articlesAnim  .3s .2s ;
+    animation: articlesAnim  .2s .2s ease-in-out;
     animation-fill-mode: backwards;
 }
 article:nth-child(3){
-    animation: articlesAnim .1s .3s;
+    animation: articlesAnim .1s .3s ease-in-out;
     animation-fill-mode: backwards;
 }
 article:nth-child(4){
@@ -35,9 +35,75 @@ article:nth-child(4){
 }
 
      
+//  menu burger
 
+.header__restaurantNav {
+    position: relative;
+}
+    
+.menuBurger {    
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    right: 30px;
+    background-color: $clear-font-color;
+    height: 0px;
+    width: 0px;
+    .fa-bars {
+        position: absolute;
+        top: -2px;
+        right: 0px;
+        font-size: 30px;
+        color: black;
+    }  
+    .burgerItem  {
+        font-size: 0px;
+    
+    }
+    &:hover {
+        top: 0px;
+        right: 0px;
+        height: auto;
+        width: auto;
+        transition: 5s linear ease-in-out;      
+        .burgerItem {
+            font-size: 18px;
+            list-style: none;
+            a {
+                display: block;
+                padding: 15px 30px 15px 30px;
+            }
+            &:hover {
+                background-color: $tertiary-color;
+            }
+        }        
+        .burgerItem.rubrique {
+            display: block;
+            padding: 40px 30px 15px 30px;
+            font-size: 18px;
+            background-color: $main-bg-color;
+        }
+        .burgerItem.accueil {
+            background-color: $semi-dark-bg-color;
+            a {
+                display: block;
+                padding: 15px 30px 15px 30px;
+                color: $clear-font-color;
+            }
+            &:hover {
+                background-color: $tertiary-color;
+                a {
+                    color: $dark-font-color;
+                }
+            }
+        } 
+        .fa-bars {
+            display: none;
+        }
+    }
+}        
 
-/**  header   **/   
+/**  header   **/  
 
 .header{
 
@@ -67,52 +133,6 @@ article:nth-child(4){
 
 }
 
-// /** check-boxes **/
-
-// .customCheck {    
-//         font-size: 0px;
-//         width: 100%;
-    
-//     input {
-//             display: none;
-//             &:checked ~ {
-//                 .subHeader__dishesType__dishesList__dishCard {
-//                     &:hover {                         
-//                         .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn  .fa-check {
-//                             animation: none;
-//                             opacity: 1;
-//                             }
-//                     }
-//                 }
-//                 .subHeader__dishesType__dishesList__dishCard__dishPriceAndCheckBtn {
-//                     transform: translateX(-65px);
-//                     // &_checkButton {
-//                     //     .fa-circle, 
-//                     //     .fa-check {
-//                     //     animation: none;
-//                     //     }
-//                     // } 
-//                 }
-//                 .subHeader__dishesType__dishesList__dishCard__dishDescription {
-//                 animation: textReduction 0s ;
-//                 animation-fill-mode:forwards;
-//                 }
-
-//             }
-//         }
-//     }
-
-//     .fa-circle{
-//         @extend %flexCentered;
-//         font-size: 25px;
-//         color: white;
-//     }
-    
-//     .fa-check{
-//         @extend %flexCentered;
-//         font-size: 16px;
-//         color:$tertiary-color;
-//     }
        
 /** Conteneur subHeader **/
 .subHeader{
@@ -294,8 +314,8 @@ input {
 }
 
 
+/**  Section commander **/
 
-/**  Commander **/
 .command{
     width: 100%;
     padding: 10px 0;
@@ -306,10 +326,7 @@ input {
     width: 180px;
     }
 }
-
-     
-
-
+  
 /*** keyframes ***/
 
 //  keyframes ouverture page
@@ -379,8 +396,9 @@ input {
 
 
 /*===========================================
-***   desktop  
-===============================================*/
+**  desktop  
+============================================*/
+
 @media (min-width: 1440px) {
 
     /**desktop: header**/

@@ -173,7 +173,7 @@ p {
 }
 .loaderBg__animContainer {
   position: absolute;
-  top: 15%;
+  top: 23%;
   left: 50%;
   width: 320px;
   margin: auto;
@@ -372,6 +372,9 @@ p {
 .header__locationSearch__searchField:focus::placeholder {
   color: transparent;
 }
+.header__locationSearch__searchField:focus .header__locationSearch__locationIconBox__locationIcon {
+  color: blue;
+}
 .header__locationSearch__locationIconBox {
   padding: 0 15px 0 0;
 }
@@ -445,9 +448,6 @@ p {
     width: 370px;
     font-weight: 600;
   }
-  .howTo__list__item p {
-    font-weight: 600;
-  }
 }
 .howTo__list__item__content {
   position: relative;
@@ -473,11 +473,31 @@ p {
 .howTo__list__item__content__iconBox__Icon {
   color: #8c8a8a;
 }
+.howTo__list__item__content .howToTxtDefault {
+  font-size: 16px;
+}
+.howTo__list__item__content .howToTxtHover {
+  font-size: 0px;
+}
 .howTo__list__item:hover {
-  transform: scaleY(1.1);
+  z-index: 3;
+  transform: scaley(1.2) scaleX(1.1);
+  transition: transform 0.4s;
+  background-color: rgba(192, 110, 247, 0.199);
+  fill-opacity: 0.3;
+}
+.howTo__list__item:hover .howToTxtDefault {
+  font-size: 0;
+}
+.howTo__list__item:hover .howToTxtHover {
+  font-size: 12px;
 }
 .howTo__list__item:hover i {
   color: #9356DC;
+}
+.howTo__list__item:hover .howTo__list__item__content__number {
+  top: -35px;
+  left: 45%;
 }
 
 /*** section Restaurants ***/
@@ -555,23 +575,88 @@ p {
 }
 
 article:nth-child(1) {
-  animation: articlesAnim 0.3s;
+  animation: articlesAnim 0.3s ease-in-out;
   animation-fill-mode: backwards;
 }
 
 article:nth-child(2) {
-  animation: articlesAnim 0.3s 0.2s;
+  animation: articlesAnim 0.2s 0.2s ease-in-out;
   animation-fill-mode: backwards;
 }
 
 article:nth-child(3) {
-  animation: articlesAnim 0.1s 0.3s;
+  animation: articlesAnim 0.1s 0.3s ease-in-out;
   animation-fill-mode: backwards;
 }
 
 article:nth-child(4) {
   animation: articlesAnim 0.05s 0.35s;
   animation-fill-mode: backwards;
+}
+
+.header__restaurantNav {
+  position: relative;
+}
+
+.menuBurger {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 30px;
+  background-color: #FFFFFF;
+  height: 0px;
+  width: 0px;
+}
+.menuBurger .fa-bars {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  font-size: 30px;
+  color: black;
+}
+.menuBurger .burgerItem {
+  font-size: 0px;
+}
+.menuBurger:hover {
+  top: 0px;
+  right: 0px;
+  height: auto;
+  width: auto;
+  transition: 5s linear ease-in-out;
+}
+.menuBurger:hover .burgerItem {
+  font-size: 18px;
+  list-style: none;
+}
+.menuBurger:hover .burgerItem a {
+  display: block;
+  padding: 15px 30px 15px 30px;
+}
+.menuBurger:hover .burgerItem:hover {
+  background-color: #99E2D0;
+}
+.menuBurger:hover .burgerItem.rubrique {
+  display: block;
+  padding: 40px 30px 15px 30px;
+  font-size: 18px;
+  background-color: #F3F3F3;
+}
+.menuBurger:hover .burgerItem.accueil {
+  background-color: #353535;
+}
+.menuBurger:hover .burgerItem.accueil a {
+  display: block;
+  padding: 15px 30px 15px 30px;
+  color: #FFFFFF;
+}
+.menuBurger:hover .burgerItem.accueil:hover {
+  background-color: #99E2D0;
+}
+.menuBurger:hover .burgerItem.accueil:hover a {
+  color: #000000;
+}
+.menuBurger:hover .fa-bars {
+  display: none;
 }
 
 /**  header   **/
@@ -744,7 +829,7 @@ article:nth-child(4) {
   color: #99E2D0;
 }
 
-/**  Commander **/
+/**  Section commander **/
 .command {
   width: 100%;
   padding: 10px 0;
@@ -814,8 +899,8 @@ article:nth-child(4) {
   }
 }
 /*===========================================
-***   desktop  
-===============================================*/
+**  desktop  
+============================================*/
 @media (min-width: 1440px) {
   /**desktop: header**/
   .header__restaurantNav {

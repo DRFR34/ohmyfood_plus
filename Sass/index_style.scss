@@ -49,12 +49,18 @@
             font-weight: 600; 
             
             &:focus{
-            outline:none;
-            background-color:$clear-font-color;                      
+                outline:none;
+                background-color:$clear-font-color; 
+                &::placeholder{
+                    color:transparent;
+                } 
+                .header__locationSearch__locationIconBox__locationIcon{
+                    color: blue;
+                }                    
             }
-            &:focus::placeholder{
-                color:transparent;
-            } 
+            // &:focus::placeholder{
+            //     color:transparent;
+            // } 
         } 
         
         &__locationIconBox{
@@ -124,51 +130,81 @@
                 padding: 25px;
                 background-color: $secondary-bg-color;    
                 font-weight: 500;
+                // &:hover{
+                //     transform: scaleY(1.2);
+                //     .howToTxtDefault {
+                //         font-size: 0;                    
+                //     }
+                //     .howToTxtHover{                    
+                //         font-size: 12px;
+                //         // color: $dark-font-color;  
+                //     }                
+                //     i{
+                //         color: $primary-color;
+                //     }
+                // }
+
                 @media screen and (min-width: 1024px){
                     width: 370px;
                     font-weight: 600;
-
-                    p{
-                        font-weight: 600;
+                } 
+                &__content{ 
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    
+                    &__number{
+                        position: absolute;
+                        left: -35px;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        background-color: $primary-color;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        color: $clear-font-color;
                     }
-                }            
-            
-                    &__content{ 
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        
-                        &__number{
-                            position: absolute;
-                            left: -35px;
-                            width: 22px;
-                            height: 22px;
-                            border-radius: 50%;
-                            background-color: $primary-color;
-                            text-align: center;
-                            font-size: 12px;
-                            font-weight: 400;
-                            line-height: 22px;
-                            color: $clear-font-color;
+
+                    &__iconBox{
+                        padding: 0 15px 0 0;
+
+                        &__Icon{
+                            color:$flat-graphics-main-color;
                         }
+                    }
 
-                        &__iconBox{
-                            padding: 0 15px 0 0;
-
-                            &__Icon{
-                                color:$flat-graphics-main-color;
-                            }
-                        }
-                    }   
+                    .howToTxtDefault {
+                        font-size: 16px;
+                    }
+                    .howToTxtHover {
+                        font-size: 0px;
+                        // transition: font-size 4s;
+                    }
+                }  
+                &:hover{
+                    z-index: 3;
+                    transform: scaley(1.2) scaleX(1.1);
+                    transition: transform .4s;
+                    background-color: rgba(192, 110, 247, 0.199);
+                    fill-opacity: .3;
+                    .howToTxtDefault {
+                        font-size: 0;                    
+                    }
+                    .howToTxtHover{                    
+                        font-size: 12px;     
+                    }                
+                    i{
+                        color: $primary-color;
+                    }
+                    .howTo__list__item__content__number{
+                        top: -35px;
+                        left: 45%;
+                    }
+                } 
             }
-
-            &__item:hover{
-                transform: scaleY(1.1);
-                i{
-                    color: $primary-color;
-                }
-            }
-        }        
+        }   
     }
 
     /*** section Restaurants ***/
