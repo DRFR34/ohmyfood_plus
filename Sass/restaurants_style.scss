@@ -332,9 +332,6 @@ input {
     button{
     width: 180px;
     }
-
-    
-
 }
 
 #popUpMask{
@@ -346,8 +343,7 @@ input {
     height: 0;
     background-color: rgba(128, 128, 128, 0.678);
     display: grid;     
-      place-items: center;
-    
+    place-items: center; /*💡 a retenir +++*/    
     overflow: hidden;
     &:target {
         z-index: 5;
